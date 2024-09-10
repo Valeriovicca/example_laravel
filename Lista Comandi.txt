@@ -1,0 +1,21 @@
+composer global require laravel/installer
+laravel new example-app
+selezionare breeze
+
+
+ sudo chmod 777 NomeFolder/ -R (comando per dare il permesso alla VM di leggere tutti i file RICORDA di andare nella cartella prima di quella a cui vuoi dare i permessi
+
+ARTISAN 
+php artisan make:type nomefile(senza estensione)  (Crea file del tipo definito, type può essere controller,view,model,migration, ecc.)
+php artisan migrate --path=path/to/migrations/folder  ( esempio: path=database/migrations/specific_migrations)
+php artisan migrate --database=connection_name (esempio: --database=mysql_connection)
+
+DOCKER
+docker-compose build (build file Dockerfile o file definito in file docker-compose.yml)
+docker-compose up (avvia i container) -d(per startare senza impegnare la console)
+docker compose exec <nomeservizio> php artisan ...  (per eseguire comandi php da macchina virtuale ubuntu dove nomeservizio è il nome definito in docker-compose.yml)
+  
+  
+  
+WSL
+wsl --unregister <distroName> Per rimuovere distro in caso di problemi
